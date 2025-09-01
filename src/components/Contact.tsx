@@ -1,8 +1,9 @@
-import React from 'react';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import React, { useState } from 'react';
+import { Loader2, Mail, MapPin, Phone, Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(false)
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,8 +87,8 @@ const Contact: React.FC = () => {
               className="space-y-6"
               onSubmit={async (e: React.FormEvent) => {
                 e.preventDefault();
-
                 const form = e.currentTarget as HTMLFormElement;
+                setLoading(true)
                 try {
                   await emailjs.sendForm("service_5kquu0l", "template_37tjacj", form);
                   alert("Message sent successfully!");
@@ -95,6 +96,9 @@ const Contact: React.FC = () => {
                 } catch (error) {
                   console.error("Error sending message:", error);
                   alert("Failed to send message. Please try again later.");
+                }
+                finally {
+                  setLoading(false)
                 }
               }}
             >
@@ -162,11 +166,20 @@ const Contact: React.FC = () => {
                 type="submit"
                 className="w-full text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
                 style={{ background: '#347AF6' }}
+                disabled={loading}
                 onMouseEnter={(e) => e.currentTarget.style.background = '#2563eb'}
                 onMouseLeave={(e) => e.currentTarget.style.background = '#347AF6'}
               >
-                <span>Send Message</span>
-                <Send className="w-5 h-5" />
+                {loading ? (
+                  <>
+                    <Loader2 className="w-5 h-5 animate-spin" />
+                  </>
+                ) : (
+                  <>
+                    <span>Send Message</span>
+                    <Send className="w-5 h-5" />
+                  </>
+                )}
               </button>
             </form>
           </div>

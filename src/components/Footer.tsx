@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
               <span>in Africa for the world</span>
             </div>
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-400">
-              <span>&copy; 2025 Nkanuzu. All rights reserved.</span>
+              <span>&copy; 2025 Nkanuzu LTD. All rights reserved.</span>
               <div className="flex space-x-4">
                 <a href="#" className="hover:text-blue-400 transition-colors duration-300">Privacy Policy</a>
                 <a href="#" className="hover:text-blue-400 transition-colors duration-300">Terms of Service</a>

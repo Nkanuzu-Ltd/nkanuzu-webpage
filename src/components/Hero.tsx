@@ -28,13 +28,13 @@ const Hero: React.FC = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           {/* Logo */}
-          <div className="flex justify-center mb-8">
+          {/* <div className="flex justify-center mb-8">
             <img
               src="/logo.png"
               alt="Nkanuzu Logo"
               className="h-24 sm:h-32"
             />
-          </div>
+          </div> */}
 
           {/* Main Heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
