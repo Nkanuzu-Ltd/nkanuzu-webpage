@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               <img
                 src="/logo.png"
                 alt="Nkanuzu Logo"
-                className="h-10"
+                className="w-[120px]"
               />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">

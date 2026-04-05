@@ -83,7 +83,7 @@ const About: React.FC = () => {
                 <img
                   src="/logo.png"
                   alt="Nkanuzu"
-                  className="h-20"
+                  className="w-[120px]"
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center">

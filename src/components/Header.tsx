@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             <img
               src="/logo.png"
               alt="Nkanuzu Logo"
-              className="h-10"
+              className="w-[120px]"
             />
           </div>
 
